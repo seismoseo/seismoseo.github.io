@@ -1,4 +1,4 @@
 # Photos shown on the /photos/ page. Each entry: an image (in assets/img/) + a caption.
 # Add/remove entries here or via Pages CMS (image upload + caption).
-- image: assets/img/prof_pic.jpg
+- image: assets/img/prof_pics.jpg
   caption: "Placeholder — replace with your own photos (fieldwork, conferences, etc.)."
