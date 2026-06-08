@@ -2,7 +2,8 @@
 layout: about
 permalink: /
 title: About
-subtitle: Seismologist · <a href="https://www.snu.ac.kr/">Seoul National University</a>
+subtitle: Seismologist-in-training · <a href="https://www.snu.ac.kr/">Seoul
+  National University</a>
 profile:
   align: right
   image: prof_pic.jpg
