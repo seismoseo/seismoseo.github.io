@@ -56,9 +56,16 @@ need glibc 2.29, which this OS doesn't have, so we build them from source instea
 **Then, every time you want to preview:**
 
 ```bash
-./serve.sh            # http://localhost:4000 with live reload
+./serve.sh            # serves on all interfaces, port 4000
 ```
 
+Then open **`http://<server-ip>:4000/`** in your browser — e.g.
+`http://REDACTED:4000/` (same way you reach JupyterLab on this machine).
+`serve.sh` prints the exact URL when it starts.
+
 Edit a file, save, and the browser refreshes automatically. Press Ctrl-C to stop.
+Note: the preview binds to all interfaces, so it's reachable by anyone who knows
+the IP:port while it's running — fine for a personal site (no secrets), but stop it
+when you're done. If auto-refresh doesn't trigger, just reload the page manually.
 Note: adding a Jupyter-notebook blog post would additionally require
 `mamba install -n homepage -c conda-forge jupyter nbconvert`.
