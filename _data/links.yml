@@ -1,0 +1,11 @@
+# Links shown on the /links/ page. Each entry: name, url, and an optional description.
+# Add/remove entries here or via Pages CMS.
+- name: SeisBench
+  url: https://github.com/seisbench/seisbench
+  description: Toolbox for machine learning in seismology (phase pickers, datasets).
+- name: ObsPy
+  url: https://obspy.org
+  description: Python framework for observational seismology.
+- name: HypoDD
+  url: https://www.ldeo.columbia.edu/~felixw/hypoDD.html
+  description: Double-difference earthquake relocation.

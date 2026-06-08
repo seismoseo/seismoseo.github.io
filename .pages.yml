@@ -79,6 +79,64 @@ content:
       - { name: body, label: Announcement text, type: rich-text }
 
   # ---------------------------------------------------------------------------
+  # Projects (card collection)
+  # ---------------------------------------------------------------------------
+  - name: projects
+    label: Projects
+    type: collection
+    path: _projects
+    filename: "{primary}.md"
+    fields:
+      - { name: layout, type: string, hidden: true, default: page }
+      - { name: title, label: Title, type: string }
+      - { name: description, label: Short description, type: text }
+      - { name: importance, label: Order (lower = first), type: number, default: 1 }
+      - { name: category, label: Category, type: string }
+      - { name: img, label: Thumbnail (assets/img/...), type: string }
+      - { name: github, label: GitHub URL, type: string }
+      - { name: redirect, label: External link (card opens this), type: string }
+      - { name: body, label: Details, type: rich-text }
+
+  # ---------------------------------------------------------------------------
+  # Photos gallery
+  # ---------------------------------------------------------------------------
+  - name: photos
+    label: Photos
+    type: file
+    path: _data/photos.yml
+    list: true
+    fields:
+      - { name: image, label: Photo, type: image }
+      - { name: caption, label: Caption, type: string }
+
+  # ---------------------------------------------------------------------------
+  # Links / resources
+  # ---------------------------------------------------------------------------
+  - name: links
+    label: Links / resources
+    type: file
+    path: _data/links.yml
+    list: true
+    fields:
+      - { name: name, label: Name, type: string }
+      - { name: url, label: URL, type: string }
+      - { name: description, label: Description, type: string }
+
+  # ---------------------------------------------------------------------------
+  # Miscellaneous page
+  # ---------------------------------------------------------------------------
+  - name: misc
+    label: Miscellaneous page
+    type: file
+    path: _pages/misc.md
+    fields:
+      - { name: layout, type: string, hidden: true }
+      - { name: title, type: string }
+      - { name: permalink, type: string, hidden: true }
+      - { name: description, label: Description, type: string }
+      - { name: body, label: Content, type: rich-text }
+
+  # ---------------------------------------------------------------------------
   # Social / contact links
   # ---------------------------------------------------------------------------
   - name: socials

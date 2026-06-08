@@ -1,7 +1,7 @@
 cv:
   name: Min-Seong Seo
-  label: Seismologist
-  email: sgtsnu@gmail.com
+  label: Seismologist-in-training
+  email: 36wnfgodfkd@snu.ac.kr
   location: Seoul, Republic of Korea
   image: ""
   summary: >
@@ -21,7 +21,7 @@ cv:
         url: https://www.snu.ac.kr/
         area: Geophysics / Seismology
         studyType: Ph.D. # or M.S. — edit to match
-        start_date: 20XX
+        start_date: March 2021
         end_date: present
         highlights:
           - "TODO: thesis topic / advisor"
@@ -38,7 +38,7 @@ cv:
       - company: Seoul National University
         position: Graduate Researcher
         location: Seoul, Republic of Korea
-        start_date: 20XX
+        start_date: March 2021
         end_date: present
         highlights:
           - "TODO: built automated earthquake catalog pipelines (phase picking, association, relocation)."
