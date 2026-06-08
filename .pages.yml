@@ -1,0 +1,175 @@
+# Pages CMS configuration — https://pagescms.org
+# Gives a web-based form GUI for editing this site at https://app.pagescms.org
+# (sign in with GitHub, grant access to this repo, then edit via forms).
+
+media:
+  input: assets/img
+  output: /assets/img
+
+content:
+  # ---------------------------------------------------------------------------
+  # About / home page
+  # ---------------------------------------------------------------------------
+  - name: about
+    label: About page
+    type: file
+    path: _pages/about.md
+    fields:
+      - { name: layout, type: string, hidden: true }
+      - { name: permalink, type: string, hidden: true }
+      - { name: title, label: Nav title, type: string }
+      - { name: subtitle, label: Subtitle (HTML allowed), type: string }
+      - name: profile
+        label: Profile box
+        type: object
+        fields:
+          - { name: align, type: select, options: { values: [left, right] } }
+          - { name: image, label: Photo filename (in assets/img), type: string }
+          - { name: image_circular, label: Crop to circle, type: boolean }
+          - { name: more_info, label: Address / info (HTML), type: text }
+      - { name: selected_papers, label: Show selected papers, type: boolean }
+      - { name: social, label: Show social icons, type: boolean }
+      - name: announcements
+        label: News section
+        type: object
+        fields:
+          - { name: enabled, type: boolean }
+          - { name: scrollable, type: boolean }
+          - { name: limit, type: number }
+      - name: latest_posts
+        label: Latest posts section
+        type: object
+        fields:
+          - { name: enabled, type: boolean }
+          - { name: scrollable, type: boolean }
+          - { name: limit, type: number }
+      - { name: body, label: Biography, type: rich-text }
+
+  # ---------------------------------------------------------------------------
+  # Blog posts
+  # ---------------------------------------------------------------------------
+  - name: posts
+    label: Blog posts
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{primary}.md"
+    fields:
+      - { name: title, label: Title, type: string }
+      - { name: date, label: Date, type: date }
+      - { name: description, label: Short description, type: string }
+      - { name: tags, label: Tags, type: string, list: true }
+      - { name: categories, label: Categories, type: string, list: true }
+      - { name: giscus_comments, label: Enable comments, type: boolean, default: false }
+      - { name: related_posts, label: Show related posts, type: boolean, default: false }
+      - { name: body, label: Content, type: rich-text }
+
+  # ---------------------------------------------------------------------------
+  # News items (short inline announcements shown on the About page)
+  # ---------------------------------------------------------------------------
+  - name: news
+    label: News items
+    type: collection
+    path: _news
+    filename: "{year}-{month}-{day}-{primary}.md"
+    fields:
+      - { name: title, label: Slug (for filename only), type: string }
+      - { name: date, label: Date, type: date }
+      - { name: inline, type: boolean, default: true, hidden: true }
+      - { name: related_posts, type: boolean, default: false, hidden: true }
+      - { name: body, label: Announcement text, type: rich-text }
+
+  # ---------------------------------------------------------------------------
+  # Social / contact links
+  # ---------------------------------------------------------------------------
+  - name: socials
+    label: Social & contact links
+    type: file
+    path: _data/socials.yml
+    fields:
+      - { name: cv_pdf, label: CV PDF path, type: string }
+      - { name: email, label: Email, type: string }
+      - { name: github_username, label: GitHub username, type: string }
+      - { name: scholar_userid, label: Google Scholar ID, type: string }
+      - { name: orcid_id, label: ORCID iD, type: string }
+      - { name: rss_icon, label: Show RSS icon, type: boolean }
+
+  # ---------------------------------------------------------------------------
+  # CV (rendered on /cv/ from this structured data)
+  # ---------------------------------------------------------------------------
+  - name: cv
+    label: CV
+    type: file
+    path: _data/cv.yml
+    fields:
+      - name: cv
+        label: CV
+        type: object
+        fields:
+          - { name: name, label: Full name, type: string }
+          - { name: label, label: Headline, type: string }
+          - { name: email, label: Email, type: string }
+          - { name: location, label: Location, type: string }
+          - { name: image, label: Photo (optional), type: string }
+          - { name: summary, label: Summary, type: text }
+          - name: social_networks
+            label: Social networks
+            type: object
+            list: true
+            fields:
+              - { name: network, type: string }
+              - { name: username, type: string }
+          - name: sections
+            label: Sections
+            type: object
+            fields:
+              - name: Education
+                type: object
+                list: true
+                fields:
+                  - { name: institution, type: string }
+                  - { name: location, type: string }
+                  - { name: url, type: string }
+                  - { name: area, type: string }
+                  - { name: studyType, label: Degree, type: string }
+                  - { name: start_date, type: string }
+                  - { name: end_date, type: string }
+                  - { name: highlights, type: string, list: true }
+              - name: Experience
+                type: object
+                list: true
+                fields:
+                  - { name: company, type: string }
+                  - { name: position, type: string }
+                  - { name: location, type: string }
+                  - { name: start_date, type: string }
+                  - { name: end_date, type: string }
+                  - { name: summary, type: text }
+                  - { name: highlights, type: string, list: true }
+              - name: Awards
+                type: object
+                list: true
+                fields:
+                  - { name: title, type: string }
+                  - { name: date, type: string }
+                  - { name: awarder, type: string }
+                  - { name: summary, type: text }
+              - name: Publications
+                type: object
+                list: true
+                fields:
+                  - { name: title, type: string }
+                  - { name: authors, type: string, list: true }
+                  - { name: releaseDate, label: Year, type: string }
+                  - { name: summary, type: text }
+              - name: Skills
+                type: object
+                list: true
+                fields:
+                  - { name: name, type: string }
+                  - { name: keywords, type: string }
+              - name: Languages
+                type: object
+                list: true
+                fields:
+                  - { name: name, type: string }
+                  - { name: summary, type: string }
