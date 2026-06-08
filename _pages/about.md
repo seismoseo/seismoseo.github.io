@@ -6,7 +6,7 @@ subtitle: Seismologist-in-training · <a href="https://www.snu.ac.kr/">Seoul
   National University</a>
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pics.jpg
   image_circular: false
   more_info: >
     <p>School of Earth and Environmental Sciences</p> <p>Seoul National
