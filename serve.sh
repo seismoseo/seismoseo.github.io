@@ -9,5 +9,9 @@
 set -euo pipefail
 cd "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PORT="${1:-4000}"
-exec mamba run --no-capture-output -n homepage \
-  bundle _4.0.6_ exec jekyll serve --host 127.0.0.1 --port "$PORT" --livereload
+
+# Activate the conda env (works whether or not conda is already initialized).
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate homepage
+
+exec bundle _4.0.6_ exec jekyll serve --host 127.0.0.1 --port "$PORT" --livereload
