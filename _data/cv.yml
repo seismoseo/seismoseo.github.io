@@ -1,0 +1,72 @@
+cv:
+  name: Min-Seong Seo
+  label: Seismologist
+  email: sgtsnu@gmail.com
+  location: Seoul, Republic of Korea
+  image: ""
+  summary: >
+    Seismologist at Seoul National University working on earthquake detection,
+    relocation, and machine-learning seismic phase picking.
+
+  social_networks:
+    - network: GitHub
+      username: seismoseo
+    # - network: LinkedIn
+    #   username: your-handle
+
+  sections:
+    Education:
+      - institution: Seoul National University
+        location: Seoul, Republic of Korea
+        url: https://www.snu.ac.kr/
+        area: Geophysics / Seismology
+        studyType: Ph.D. # or M.S. — edit to match
+        start_date: 20XX
+        end_date: present
+        highlights:
+          - "TODO: thesis topic / advisor"
+          - "TODO: notable coursework or focus"
+
+      - institution: Your Undergraduate University
+        location: City, Country
+        area: Earth Sciences
+        studyType: B.S.
+        start_date: 20XX
+        end_date: 20XX
+
+    Experience:
+      - company: Seoul National University
+        position: Graduate Researcher
+        location: Seoul, Republic of Korea
+        start_date: 20XX
+        end_date: present
+        highlights:
+          - "TODO: built automated earthquake catalog pipelines (phase picking, association, relocation)."
+          - "TODO: add a second bullet."
+
+    Awards:
+      - title: "TODO: award or scholarship name"
+        date: 20XX
+        awarder: Awarding body
+        summary: "Short description (optional)."
+
+    Publications:
+      - title: "TODO: see _bibliography/papers.bib — the publications page is auto-generated from BibTeX"
+        authors:
+          - Min-Seong Seo
+        releaseDate: 2026
+        summary: "You can list selected papers here too, or just keep them in papers.bib."
+
+    Skills:
+      - name: Seismology
+        keywords: "phase picking, earthquake relocation (HypoDD, HYPOINVERSE), catalog building"
+      - name: Programming
+        keywords: "Python, ObsPy, SeisBench/PhaseNet, PyOcto, NumPy, Fortran"
+      - name: Tools
+        keywords: "Git, Linux, GMT/PyGMT, JupyterLab"
+
+    Languages:
+      - name: Korean
+        summary: Native speaker
+      - name: English
+        summary: Professional working proficiency

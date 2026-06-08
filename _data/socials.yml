@@ -1,0 +1,11 @@
+# Social media links shown at the bottom of the About page and in search results.
+# They are displayed in the order defined here.
+# Docs: https://github.com/george-gca/jekyll-socials
+# Fill in / remove placeholders (TODO) as you go.
+
+cv_pdf: /assets/pdf/cv.pdf # path to your CV PDF (replace assets/pdf/cv.pdf with your real CV)
+email: sgtsnu@gmail.com # your email address
+github_username: seismoseo # GitHub username
+scholar_userid: # TODO: your Google Scholar ID (the string after "user=" in your Scholar profile URL)
+orcid_id: # TODO: your ORCID iD, e.g. 0000-0002-1825-0097
+rss_icon: true # comment this line to hide the RSS icon
