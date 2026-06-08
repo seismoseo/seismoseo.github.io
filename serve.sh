@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Local live preview of the site.
+#
+# Prerequisite (one-time): the conda env "homepage" with Ruby/Node/ImageMagick and
+# gems installed — see the "Local preview" section of README.md.
+#
+# Usage:  ./serve.sh            # serves at http://localhost:4000 with live reload
+#         ./serve.sh 8080       # use a different port
+set -euo pipefail
+cd "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PORT="${1:-4000}"
+exec mamba run --no-capture-output -n homepage \
+  bundle _4.0.6_ exec jekyll serve --host 127.0.0.1 --port "$PORT" --livereload
