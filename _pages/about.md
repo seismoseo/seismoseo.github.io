@@ -26,7 +26,7 @@ I am PhD student (6th year as of 2026) in [School of Earth and Environmental Sci
 
 Specifically, my interest is focused on earthquake source seismology. So far, I have conducted detailed analysis of interpreting seismograms for better understanding of earthquake sequences and source properties, in particular in the Korean Peninsula. The skills include earthquake detection, location (absolute, double-difference), and interpretation of source time functions or source spectra. Furthermore, I am acquainted with statistical analysis of earthquake sequences, such as b-value, Omori law, and clustering analysis. Lastly, I have conducted calibration of seismometer orientations in South Korea, which is crucial step prior to any valid analysis of horizontal component seismograms.
 
-The development of this homepage was enabled by [Claude Code](https://claude.com/ko/product/claude-code), but my goal is to manage all the contents without help from AI. Please bear with any broken English.
+The development of this website was enabled by [Claude Code](https://claude.com/ko/product/claude-code), but my goal is to manage all the contents without help from AI. Please bear with any broken English.
 
 Below you'll find my [publications](/publications/), a short [CV](/cv/), and
 occasional [notes](/blog/). Feel free to reach out by email.
