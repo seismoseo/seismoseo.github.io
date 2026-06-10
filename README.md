@@ -59,9 +59,8 @@ need glibc 2.29, which this OS doesn't have, so we build them from source instea
 ./serve.sh            # serves on all interfaces, port 4000
 ```
 
-Then open **`http://<server-ip>:4000/`** in your browser — e.g.
-`http://REDACTED:4000/` (same way you reach JupyterLab on this machine).
-`serve.sh` prints the exact URL when it starts.
+Then open **`http://<server-ip>:4000/`** in your browser (the same way you reach
+JupyterLab on this machine). `serve.sh` prints the exact URL when it starts.
 
 Edit a file, save, and the browser refreshes automatically. Press Ctrl-C to stop.
 Note: the preview binds to all interfaces, so it's reachable by anyone who knows

@@ -8,7 +8,7 @@
 #         ./serve.sh 8000       # use a different port
 #
 # Then open  http://<this-server-ip>:<port>/  in your browser
-# (e.g. http://REDACTED:4000/).
+# (the exact URL is printed when the server starts).
 set -euo pipefail
 cd "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PORT="${1:-4000}"
