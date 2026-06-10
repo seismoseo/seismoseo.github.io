@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://seismoseo.github.io/sitemap.xml
